@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "4694ac44-ffee-4ad9-9deb-b9a79eb9a118",
+		"name": "Pets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\" : \"perola4\",\r\n    \"especie\":\"Equino\",\r\n    \"porte\" : \"Grande\",\r\n    \"dataNascimento\" : \"2015-06-20\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/pet/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 2,\r\n    \"nome\" : \"perola4\",\r\n    \"especie\":\"Ouvino\",\r\n    \"porte\" : \"Médio\",\r\n    \"dataNascimento\" : \"2015-06-20\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/pet/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Cadastros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/pet/buscar/true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet",
+						"buscar",
+						"true"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/pet/deletar/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet",
+						"deletar",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ativar Inativar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1,\r\n    \"status\" : false\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/pet/ativar_Inativar_pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet",
+						"ativar_Inativar_pet"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
